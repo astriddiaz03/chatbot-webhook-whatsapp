@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/a65b6a48-8bc1-4784-98b3-ed3bbc6ad20d/resourceGroups/test-lab-whatsapp_group/providers/Microsoft.Web/sites/test-lab-whatsapp",
-    "appService.deploySubpath": "."
-}
