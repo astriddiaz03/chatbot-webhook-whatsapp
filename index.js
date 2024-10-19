@@ -5,10 +5,6 @@ const express= require('express');
 const cors =require('cors');
 require('dotenv').config();
 
-//mensaje bienvenida
-
-console.log("API REST CORRIENDO EN XXXXXXXXXXXXXXXXXXXXX");
-
 // ejecutar conexion a la bd
 //connection();
 
@@ -66,7 +62,6 @@ app.get("/webhook", (req, res) => {
     const mode = req.query["hub.mode"];
     const token = req.query["hub.verify_token"];
     const challenge = req.query["hub.challenge"];
-    // const WEBHOOK_VERIFY_TOKEN = process.env.WHATSAPP_WEBHOOK_VERIFY_TOKEN;  
 
     // Check the mode and token sent are correct  
     if (mode === "subscribe" && token === process.env.WHATSAPP_WEBHOOK_VERIFY_TOKEN) {

@@ -16,15 +16,7 @@ const SelectAuthenticationOptions = [
     }
 ];
 
-const selectAuthenticationValidation = [
-    {
-        "type": "reply",
-        "reply": {
-            "id": "001",
-            "title": "Listo"
-        }
-    }
-];
+
 
 const selectYesOrNo = [
     {
@@ -87,9 +79,6 @@ const selectMainStep = [
 
 module.exports = {
     SelectAuthenticationOptions,
-    selectAuthenticationValidation,
-    selectFundOptionsPromptStep,
-    selectTransferOptionsStep,
     selectModifyDataStep,
     selectConfirmEmailStep,
     selectMainStep, selectYesOrNo

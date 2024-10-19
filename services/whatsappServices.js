@@ -13,7 +13,6 @@ class WhatsAppConnector {
         for (const activity of activities) {
             if (activity.type === 'message') {
                 data = activity.text;
-                // Convierte el mensaje en el formato JSON específico  
                 const response = await this.sendMessageToWhatsApp(data);
                 return [response];
             }
@@ -27,7 +26,7 @@ class WhatsAppConnector {
             host: "graph.facebook.com",
             path: "/v20.0/134631209728179/messages",
             method: "POST",
-            body: data,  //lo q se contruye en la funcion en este caso Data 
+            body: data, 
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": process.env.WHATSAPP_TOKEN_BEARER
@@ -39,7 +38,7 @@ class WhatsAppConnector {
                 let responseData = '';
 
                 res.on('data', d => {
-                    process.stdout.write(d); // Mantener esta línea  
+                    process.stdout.write(d); 
                     responseData += d;
                 });
 

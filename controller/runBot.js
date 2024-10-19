@@ -48,6 +48,7 @@ class BotWspApp extends ActivityHandler {
           await dialogContext.cancelAllDialogs();
           await this.conversationState.saveChanges(context, true);  
           await this.userState.saveChanges(context, true);
+          
 
         }
         else

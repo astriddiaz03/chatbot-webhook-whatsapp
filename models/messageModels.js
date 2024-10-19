@@ -51,19 +51,6 @@ function MessageButtonOption(textResponse, phoneNumber, buttons) {
 }
 
 
-function MessageUrlCuprum(textResponse, phoneNumber) {
-    const data = JSON.stringify({
-        "messaging_product": "whatsapp",
-        "to": phoneNumber,
-        "text": {
-            "preview_url": false,
-            "body": textResponse ,
-        }
-
-    });
-    return data;
-}
-
 
 
 function MessageUrlAUTH(textResponse, phoneNumber) {
@@ -93,45 +80,7 @@ function MessageLocation(phoneNumber) {
 }
 
 
-function MessageChoiceFondoslist(textResponse, phoneNumber) {
-    const data = JSON.stringify({
-        "messaging_product": "whatsapp",
-        "to": phoneNumber,
-        "type": "interactive",
-        "interactive": {
-            "type": "list",
-            "header": {
-                "type": "text",
-                "text": "Elige uan opción"
-            },
-            "body": {
-                "text": textResponse
-            },
-            "footer": {
-                "text": ""
-            },
-            "action": {
-                "button": "Opciones",
-                "sections": [
-                    {
-                        "title": "Opciones",
-                        "rows": [
-                            {
-                                "id": "ID-001",
-                                "title": "XXXX",
-                                "description": "XXXXXXX"
-                            }
-                        ]
-                    }
 
-                ]
-            }
-        }
-
-
-    });
-    return data;
-}
 
 
 function MessageCallToAction(textResponse, phoneNumber, urlAPI) {
@@ -168,9 +117,7 @@ function MessageCallToAction(textResponse, phoneNumber, urlAPI) {
 
 module.exports = {
     Messagetext,
-    MessageChoiceFondoslist,
     MessageLocation,
-    MessageUrlCuprum,
     MessageButtonOption,
     MessagetextReply,
     MessageUrlAUTH,
